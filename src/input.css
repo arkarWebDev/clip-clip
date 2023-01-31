@@ -20,14 +20,31 @@
   @apply max-w-3xl mx-auto leading-9 text-center text-grayishBlue;
 }
 
+.button-container {
+  @apply flex flex-col justify-center w-full space-y-6 text-xl text-white md:flex-row md:space-y-0 md:space-x-4;
+}
+
 body {
-  background-image: url('../images/bg-header-desktop.png');
+  background-image: url("../images/bg-header-desktop.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
 
 @media (max-width: 576px) {
   body {
-    background-image: url('../images/bg-header-mobile.png');
+    background-image: url("../images/bg-header-mobile.png");
   }
+}
+
+.socialIcon:hover {
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg)
+    brightness(101%) contrast(94%);
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: hsl(171, 66%, 44%);
 }
